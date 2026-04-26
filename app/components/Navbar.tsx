@@ -84,9 +84,7 @@ export default function Navbar() {
             <div className="w-px h-4 bg-white/10" />
 
             <a
-              href="https://clublustig.nl/Tickets.html"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/tickets"
               className="text-[0.75rem] font-bold tracking-[0.25em] uppercase px-6 py-3 bg-gold text-black hover:bg-white transition-all duration-300"
             >
               Buy Tickets
