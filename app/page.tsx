@@ -2,9 +2,8 @@ import Navbar from "@/app/components/Navbar";
 import HeroSection from "@/app/components/HeroSection";
 import EventsSection from "@/app/components/EventsSection";
 import FeaturedEvent from "@/app/components/FeaturedEvent";
-import VIPSection from "@/app/components/VIPSection";
+import PartyCalendar from "@/app/components/PartyCalendar";
 import GallerySection from "@/app/components/GallerySection";
-import LocationSection from "@/app/components/LocationSection";
 import Footer from "@/app/components/Footer";
 
 export default function Home() {
@@ -14,9 +13,8 @@ export default function Home() {
       <HeroSection />
       <EventsSection />
       <FeaturedEvent />
-      <VIPSection />
+      <PartyCalendar />
       <GallerySection />
-      <LocationSection />
       <Footer />
     </main>
   );

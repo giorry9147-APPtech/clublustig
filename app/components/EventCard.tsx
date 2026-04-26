@@ -20,25 +20,20 @@ export default function EventCard({ event, index }: EventCardProps) {
       {/* Image via CSS background — never crashes on missing file */}
       <div
         className="relative h-[400px] sm:h-[460px] overflow-hidden transition-transform duration-700 group-hover:scale-[1.02]"
-        style={{
-          backgroundImage: `url('${event.image}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundColor: "#111",
-          background: `linear-gradient(160deg, #1e1408 0%, #0f0f0f 60%, #0a0a0a 100%)`,
-        }}
+        style={{ backgroundColor: "#0f0f0f" }}
       >
-        {/* Actual image on top — doesn't crash when missing */}
+        {/* Flyer — fully visible */}
         <div
-          className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+          className="absolute inset-0"
           style={{
             backgroundImage: `url('${event.image}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center top",
           }}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
         {/* Genre tag */}
         <div className="absolute top-4 left-4 z-10">

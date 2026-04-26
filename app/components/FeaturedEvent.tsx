@@ -43,22 +43,17 @@ export default function FeaturedEvent() {
               style={{ scale: imgScale }}
               className="absolute inset-0"
             >
-              {/* CSS background image — silent on missing file */}
               <div
                 className="absolute inset-0"
-                style={{
-                  backgroundImage: `url('${featured.image}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  background: `linear-gradient(135deg, #1c1208 0%, #0f0f0f 60%, #080808 100%)`,
-                }}
+                style={{ background: `linear-gradient(135deg, #1c1208 0%, #0f0f0f 60%, #080808 100%)` }}
               />
               <div
                 className="absolute inset-0"
                 style={{
                   backgroundImage: `url('${featured.image}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center top",
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0d0d0d] hidden lg:block" />
@@ -114,7 +109,7 @@ export default function FeaturedEvent() {
                 href={featured.ticketUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gold text-black label-overline hover:bg-gold-light transition-all duration-300 glow-gold"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gold hover:bg-white transition-all duration-300 text-[0.7rem] font-bold tracking-[0.25em] uppercase text-black"
               >
                 Buy Ticket <span>→</span>
               </a>

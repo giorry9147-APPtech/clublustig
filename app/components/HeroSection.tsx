@@ -30,7 +30,7 @@ export default function HeroSection() {
         }}
         poster="/images/hero-poster.jpg"
       >
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source src="/videos/hero1.mp4" type="video/mp4" />
       </video>
 
       {/* Top gradient — navbar leesbaar */}
@@ -63,8 +63,8 @@ export default function HeroSection() {
 
       {/* Knoppen — onderin */}
       <motion.div
-        style={{ opacity, zIndex: 2, position: "absolute", bottom: "4rem", left: 0, right: 0 }}
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-6"
+        style={{ opacity, zIndex: 2, position: "absolute", left: 0, right: 0 }}
+        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-6 bottom-20 sm:bottom-32"
       >
         <motion.a
           href="#events"
