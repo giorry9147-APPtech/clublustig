@@ -29,13 +29,13 @@ export default function HeroSection() {
         loop
         playsInline
         preload="auto"
+        className="object-contain sm:object-cover"
         style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100vw",
           height: "100vh",
-          objectFit: "cover",
           zIndex: 0,
         }}
       >
