@@ -1,24 +1,34 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function HeroSection() {
   const ref = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
+  // Mobiel vereist programmatische play() — autoPlay attribuut alleen is niet genoeg
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.play().catch(() => {});
+  }, []);
 
   return (
     <section
       ref={ref}
       style={{ width: "100vw", height: "100vh", position: "relative", overflow: "hidden" }}
     >
-      {/* Video — puur, geen filters of overlays */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         style={{
           position: "absolute",
           top: 0,
@@ -28,7 +38,6 @@ export default function HeroSection() {
           objectFit: "cover",
           zIndex: 0,
         }}
-        poster="/images/hero-poster.jpg"
       >
         <source src="/videos/hero1.mp4" type="video/mp4" />
       </video>
