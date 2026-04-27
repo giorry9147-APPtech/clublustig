@@ -165,6 +165,28 @@ body::before {
   }
 }
 
+/* ── Ken Burns keyframes ───────────────────────────── */
+@keyframes kb-zoom-in {
+  from { transform: scale(1)    translate(0%,  0%); }
+  to   { transform: scale(1.12) translate(-1%, -1%); }
+}
+@keyframes kb-zoom-out {
+  from { transform: scale(1.12) translate(1%,  1%); }
+  to   { transform: scale(1)    translate(-1%, 0%); }
+}
+@keyframes kb-pan-right {
+  from { transform: scale(1.1) translate(-3%, 0%); }
+  to   { transform: scale(1.1) translate(3%,  0%); }
+}
+@keyframes kb-pan-left {
+  from { transform: scale(1.1) translate(3%,  0%); }
+  to   { transform: scale(1.1) translate(-3%, 0%); }
+}
+@keyframes kb-zoom-in-up {
+  from { transform: scale(1)    translate(0%,  2%); }
+  to   { transform: scale(1.12) translate(1%, -1%); }
+}
+
 /* ── Horizontal scroll snap ────────────────────────── */
 .scroll-container {
   overflow-x: auto;
