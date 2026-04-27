@@ -66,7 +66,7 @@ export default function HeroSection() {
       {/* Knoppen — onderin */}
       <motion.div
         style={{ opacity, zIndex: 2, position: "absolute", left: 0, right: 0 }}
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-6 bottom-20 sm:bottom-32"
+        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-6 bottom-12 sm:bottom-32"
       >
         <motion.a
           href="#events"
