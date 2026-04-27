@@ -69,7 +69,7 @@ export default function HeroSection() {
         className="flex flex-col sm:flex-row items-center justify-center gap-4 px-6 bottom-12 sm:bottom-32"
       >
         <motion.a
-          href="#events"
+          href="/#events"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -78,7 +78,7 @@ export default function HeroSection() {
           View Events
         </motion.a>
         <motion.a
-          href="#events"
+          href="/tickets"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
@@ -88,21 +88,6 @@ export default function HeroSection() {
         </motion.a>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        style={{ opacity, zIndex: 2, position: "absolute", bottom: "1.5rem", left: "50%", transform: "translateX(-50%)" }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 1 }}
-        className="flex flex-col items-center gap-1"
-      >
-        <span className="label-overline text-white/40">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="w-[1px] h-8 bg-gradient-to-b from-white/40 to-transparent"
-        />
-      </motion.div>
     </section>
   );
 }

@@ -114,7 +114,7 @@ export default function FeaturedEvent() {
                 Buy Ticket <span>→</span>
               </a>
               <a
-                href="#events"
+                href="/#events"
                 className="label-overline text-white/40 hover:text-white transition-colors duration-300 border-b border-white/20 hover:border-white/50 pb-0.5"
               >
                 All events

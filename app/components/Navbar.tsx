@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "Events",   href: "#events" },
+  { label: "Events",   href: "/#events" },
   { label: "Tickets",  href: "/tickets" },
-  { label: "Gallery",  href: "#gallery" },
-  { label: "Calendar", href: "#calendar" },
+  { label: "Gallery",  href: "/#gallery" },
+  { label: "Calendar", href: "/#calendar" },
 ];
 
 export default function Navbar() {
@@ -134,12 +134,12 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="#events"
+              href="/tickets"
               onClick={() => setMenuOpen(false)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="label-overline px-8 py-4 border border-gold text-gold hover:bg-gold hover:text-black transition-all duration-300 mt-4"
+              className="px-8 py-4 bg-gold text-black text-[0.75rem] font-bold tracking-[0.25em] uppercase hover:bg-white transition-all duration-300 mt-4"
             >
               Buy Tickets
             </motion.a>

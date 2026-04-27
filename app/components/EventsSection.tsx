@@ -24,7 +24,7 @@ export default function EventsSection() {
           </motion.div>
 
           <motion.a
-            href="#"
+            href="/tickets"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
