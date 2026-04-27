@@ -87,7 +87,7 @@ export default function HeroSection() {
         <img
           src="/images/logo.PNG"
           alt="Club Lustig"
-          className="w-56 sm:w-80 md:w-96 select-none"
+          className="w-72 sm:w-80 md:w-96 select-none"
           style={{ filter: "invert(1)" }}
         />
       </div>
@@ -95,7 +95,7 @@ export default function HeroSection() {
       {/* Knoppen */}
       <motion.div
         style={{ opacity, zIndex: 20, position: "absolute", left: 0, right: 0 }}
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-6 bottom-12 sm:bottom-32"
+        className="flex flex-row items-center justify-center gap-3 px-6 bottom-12 sm:bottom-32"
       >
         <motion.a
           href="/#events"
