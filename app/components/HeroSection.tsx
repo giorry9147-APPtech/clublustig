@@ -78,6 +78,24 @@ export default function HeroSection() {
         style={{ background: "linear-gradient(to top, #0a0a0a 0%, transparent 100%)" }}
       />
 
+      {/* Gecentreerd logo */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.92 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none"
+      >
+        <img
+          src="/images/logo.PNG"
+          alt="Club Lustig"
+          className="w-56 sm:w-80 md:w-96 select-none"
+          style={{
+            filter: "invert(1)",
+            mixBlendMode: "screen",
+          }}
+        />
+      </motion.div>
+
       {/* Knoppen */}
       <motion.div
         style={{ opacity, zIndex: 20, position: "absolute", left: 0, right: 0 }}
