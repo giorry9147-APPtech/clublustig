@@ -20,7 +20,7 @@ export default function HeroSection() {
   return (
     <section
       ref={ref}
-      style={{ width: "100vw", height: "100vh", position: "relative", overflow: "hidden" }}
+      className="relative overflow-hidden w-screen h-[60vh] sm:h-screen"
     >
       <video
         ref={videoRef}
@@ -29,15 +29,8 @@ export default function HeroSection() {
         loop
         playsInline
         preload="auto"
-        className="object-contain sm:object-cover"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100vw",
-          height: "100vh",
-          zIndex: 0,
-        }}
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: 0 }}
       >
         <source src="/videos/hero1.mp4" type="video/mp4" />
       </video>
