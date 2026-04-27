@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import type { Event } from "@/app/lib/data";
 
@@ -16,11 +16,16 @@ export default function TicketCard({ event, index }: { event: Event; index: numb
     }));
   };
 
-  const total = event.tickets.reduce(
-    (sum, t) => sum + t.price * (quantities[t.id] ?? 0),
-    0
-  );
-  const totalTickets = Object.values(quantities).reduce((a, b) => a + b, 0);
+  const { total, totalTickets } = useMemo(() => {
+    let total = 0;
+    let totalTickets = 0;
+    for (const t of event.tickets) {
+      const qty = quantities[t.id] ?? 0;
+      total += t.price * qty;
+      totalTickets += qty;
+    }
+    return { total, totalTickets };
+  }, [quantities, event.tickets]);
 
   return (
     <motion.div
@@ -138,7 +143,6 @@ export default function TicketCard({ event, index }: { event: Event; index: numb
                   ? "bg-gold text-black hover:bg-white cursor-pointer"
                   : "bg-white/5 text-white/20 cursor-not-allowed pointer-events-none"
               }`}
-              onClick={(e) => totalTickets === 0 && e.preventDefault()}
             >
               Ga naar kassa →
             </a>

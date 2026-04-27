@@ -1,9 +1,8 @@
-export interface TicketCategory {
+﻿export interface TicketCategory {
   id: string;
   name: string;
   price: number;
   description: string;
-  available: boolean;
 }
 
 export interface Event {
@@ -32,29 +31,29 @@ export const events: Event[] = [
     title: "DOBBEL9",
     subtitle: "Birthday Bash",
     date: "VR 24 APR",
-    time: "23:00 – 08:00",
+    time: "23:00 â€“ 08:00",
     image: "/images/events/event-1.jpeg",
     ticketUrl: "https://clublustig.nl/Tickets.html",
     genre: "Hip-Hop / Caribbean",
     isFeatured: true,
     tickets: [
-      { id: "1-eb",  name: "Early Bird",  price: 12, description: "Beperkt beschikbaar", available: true },
-      { id: "1-reg", name: "Normaal",     price: 17, description: "Standaard entree",    available: true },
-      { id: "1-vip", name: "VIP Tafel",   price: 45, description: "Inclusief fles",      available: true },
+      { id: "1-eb",  name: "Early Bird",  price: 12, description: "Beperkt beschikbaar" },
+      { id: "1-reg", name: "Normaal",     price: 17, description: "Standaard entree" },
+      { id: "1-vip", name: "VIP Tafel",   price: 45, description: "Inclusief fles" },
     ],
   },
   {
     id: "2",
     title: "SEXY SATURDAY",
-    subtitle: "Typical • Mike Motion • Poison D • Mc Raffi • Josh",
+    subtitle: "Typical â€¢ Mike Motion â€¢ Poison D â€¢ Mc Raffi â€¢ Josh",
     date: "ZAT 25 APR",
-    time: "23:00 – 08:00",
+    time: "23:00 â€“ 08:00",
     image: "/images/events/event-2.PNG",
     ticketUrl: "https://clublustig.nl/Tickets.html",
     genre: "Club / Mixed",
     tickets: [
-      { id: "2-eb",  name: "Early Bird", price: 10, description: "Beperkt beschikbaar", available: true },
-      { id: "2-reg", name: "Normaal",    price: 15, description: "Standaard entree",    available: true },
+      { id: "2-eb",  name: "Early Bird", price: 10, description: "Beperkt beschikbaar" },
+      { id: "2-reg", name: "Normaal",    price: 15, description: "Standaard entree" },
     ],
   },
   {
@@ -62,28 +61,28 @@ export const events: Event[] = [
     title: "KINGS NIGHT",
     subtitle: "Met Latu",
     date: "ZO 26 APR",
-    time: "23:00 – 08:00",
+    time: "23:00 â€“ 08:00",
     image: "/images/events/event-3.PNG",
     ticketUrl: "https://clublustig.nl/Tickets.html",
     genre: "Club / Mixed",
     tickets: [
-      { id: "3-eb",  name: "Early Bird", price: 10, description: "Beperkt beschikbaar", available: true },
-      { id: "3-reg", name: "Normaal",    price: 15, description: "Standaard entree",    available: true },
-      { id: "3-vip", name: "VIP Tafel",  price: 40, description: "Inclusief fles",      available: true },
+      { id: "3-eb",  name: "Early Bird", price: 10, description: "Beperkt beschikbaar" },
+      { id: "3-reg", name: "Normaal",    price: 15, description: "Standaard entree" },
+      { id: "3-vip", name: "VIP Tafel",  price: 40, description: "Inclusief fles" },
     ],
   },
   {
     id: "4",
     title: "BUBBLING HOUSE",
-    subtitle: "Party — Moortje • Dobbel 9 • Mc Raffi",
+    subtitle: "Party â€” Moortje â€¢ Dobbel 9 â€¢ Mc Raffi",
     date: "WO 13 MEI",
-    time: "23:00 – 08:00",
+    time: "23:00 â€“ 08:00",
     image: "/images/events/event-4.jpeg",
     ticketUrl: "https://clublustig.nl/Tickets.html",
     genre: "Bubbling / House",
     tickets: [
-      { id: "4-eb",  name: "Early Bird", price: 8,  description: "Beperkt beschikbaar", available: true },
-      { id: "4-reg", name: "Normaal",    price: 12, description: "Standaard entree",    available: true },
+      { id: "4-eb",  name: "Early Bird", price: 8,  description: "Beperkt beschikbaar" },
+      { id: "4-reg", name: "Normaal",    price: 12, description: "Standaard entree" },
     ],
   },
   {
@@ -91,14 +90,14 @@ export const events: Event[] = [
     title: "TSEAN",
     subtitle: "Live on Stage",
     date: "VR 22 MEI",
-    time: "23:00 – 08:00",
+    time: "23:00 â€“ 08:00",
     image: "/images/events/event-5.jpeg",
     ticketUrl: "https://clublustig.nl/Tickets.html",
     genre: "Hip-Hop / R&B",
     tickets: [
-      { id: "5-eb",  name: "Early Bird", price: 15, description: "Beperkt beschikbaar", available: true },
-      { id: "5-reg", name: "Normaal",    price: 22, description: "Standaard entree",    available: true },
-      { id: "5-vip", name: "VIP Tafel",  price: 55, description: "Inclusief fles",      available: true },
+      { id: "5-eb",  name: "Early Bird", price: 15, description: "Beperkt beschikbaar" },
+      { id: "5-reg", name: "Normaal",    price: 22, description: "Standaard entree" },
+      { id: "5-vip", name: "VIP Tafel",  price: 55, description: "Inclusief fles" },
     ],
   },
 ];
