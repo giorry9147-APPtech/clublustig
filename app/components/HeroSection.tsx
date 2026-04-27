@@ -9,12 +9,33 @@ export default function HeroSection() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
-  // Mobiel vereist programmatische play() — autoPlay attribuut alleen is niet genoeg
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
+
     v.muted = true;
-    v.play().catch(() => {});
+
+    const tryPlay = () => { v.muted = true; v.play().catch(() => {}); };
+
+    // 1. Meteen proberen
+    tryPlay();
+
+    // 2. Zodra video geladen is
+    v.addEventListener("canplay", tryPlay);
+
+    // 3. Bij eerste aanraking/klik (iOS blokkeert soms tot interactie)
+    const onTouch = () => tryPlay();
+    document.addEventListener("touchstart", onTouch, { once: true });
+    document.addEventListener("click", onTouch, { once: true });
+
+    // 4. Wanneer pagina weer zichtbaar wordt (terugnavigeren)
+    const onVisible = () => { if (!document.hidden) tryPlay(); };
+    document.addEventListener("visibilitychange", onVisible);
+
+    return () => {
+      v.removeEventListener("canplay", tryPlay);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
   }, []);
 
   return (
